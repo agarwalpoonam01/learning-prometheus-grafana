@@ -94,7 +94,7 @@ sudo systemctl start node_exporter.service
 sudo systemctl enable node_exporter.service
 
 sudo vi /etc/prometheus/prometheus.yml 
-
+```
   - job_name: 'node_exporter'
   
     scrape_interval: 5s
@@ -103,7 +103,7 @@ sudo vi /etc/prometheus/prometheus.yml
     
       - targets: ['localhost:9100']
 
-
+```
 sudo systemctl restart prometheus
 
 
@@ -135,7 +135,7 @@ Python exporters that exposes :
 
 
 sudo vi /etc/prometheus/prometheus.yml 
-
+```
   - job_name: "memory-cpu"
   
     static_configs:
@@ -149,7 +149,7 @@ sudo vi /etc/prometheus/prometheus.yml
     
       - targets: ["localhost:3333"]
       
-
+```
 sudo systemctl restart prometheus
 
 
